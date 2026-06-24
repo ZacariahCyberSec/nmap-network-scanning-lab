@@ -1,28 +1,35 @@
-# 🚀 SOC Analyst Lab – Nmap Scanning & Enumeration
+🚀 SOC Analyst Lab – Nmap Network Scanning & Vulnerability Assessment
 
-## 📌 Overview
-This project demonstrates practical network scanning and vulnerability assessment using Nmap in Termux (Android).
+📌 Overview
+
+This project demonstrates a hands-on cybersecurity lab focused on network reconnaissance, service enumeration, and vulnerability assessment using Nmap in a Termux (Android Linux) environment.
+
+The goal of this lab is to simulate real-world SOC analysis workflows by identifying open ports, services, and potential vulnerabilities on a target system.
 
 ---
 
-## 🛠 Tools Used
+🛠 Tools & Environment
+
 - Nmap
-- Termux (Android Linux)
+- Termux (Android Linux environment)
+- Linux command-line
 
 ---
 
-## 🎯 Target
-scanme.nmap.org (authorized test target)
+🎯 Target
+
+- scanme.nmap.org (authorized testing target)
 
 ---
 
-## 🔍 Basic Scan
-Command:
+🔍 Phase 1: Network Reconnaissance
+
 nmap -Pn scanme.nmap.org
 
-Result:
-- Host is up
-- Open ports:
+Key Findings:
+
+- Host is active
+- Multiple open ports identified:
   - 22 (SSH)
   - 80 (HTTP)
   - 9929 (Nping)
@@ -30,58 +37,103 @@ Result:
 
 ---
 
-## 🔎 Service Scan
-Command:
+🔎 Phase 2: Service & Version Detection
+
 nmap -sV scanme.nmap.org
 
-Result:
+Key Findings:
+
 - SSH: OpenSSH (Ubuntu)
-- HTTP: Apache (Ubuntu)
+- HTTP: Apache Web Server
 
 ---
 
-## 🧠 Advanced Scan
-Command:
+🧠 Phase 3: Advanced Enumeration
+
 nmap -A scanme.nmap.org
 
-Result:
+Key Findings:
+
 - OS detected: Linux
 - Service versions identified
+- HTTP headers exposed
 
 ---
 
-## 🚨 Vulnerability Scan
-Command:
+🚨 Phase 4: Vulnerability Assessment
+
 nmap --script vuln scanme.nmap.org
 
-Result:
-- Possible CSRF found
-- No XSS detected
+Key Findings:
+
+- Potential CSRF vulnerability detected
+- No XSS vulnerabilities found
+- SQL injection test inconclusive
 
 ---
 
-## 🌐 Web Enumeration
-Command:
+🌐 Phase 5: Web Enumeration
+
 nmap --script http-enum -p 80 scanme.nmap.org
 
-Result:
-- /images/ directory exposed
+Key Findings:
+
+- Exposed directory: "/images/"
+- Indicates possible misconfiguration
 
 ---
 
-## 🛡️ Key Takeaways
-- Open ports increase risk
-- Services reveal system details
-- Enumeration is critical in security testing
+📸 Screenshots
+
+🔍 Full Scan
+
+"Scan" (screenshots/scan.png)
+
+🚨 Vulnerability Scan
+
+"Vuln" (screenshots/vuln.png)
+
+🌐 Web Enumeration
+
+"Enum" (screenshots/enum.png)
 
 ---
 
-## ⚠️ Disclaimer
-This scan was performed on an authorized target (scanme.nmap.org)
+🛡️ Security Analysis
 
+From a SOC Analyst perspective, this activity represents:
 
-## 📸 Screenshots
+- Network reconnaissance behavior
+- Service enumeration attempts
+- Vulnerability scanning activity
+- Web probing for exposed directories
 
-![Scan](scan.jpg)
-![Vuln](vuln.jpg)
-![Enum](enum.jpg)
+Potential Risks Identified:
+
+- Open services increase attack surface
+- Outdated services may expose vulnerabilities
+- Directory exposure may lead to information disclosure
+
+---
+
+🎯 Skills Demonstrated
+
+- Network scanning & reconnaissance
+- Service enumeration
+- Vulnerability assessment
+- Web application enumeration
+- Security analysis & interpretation
+
+---
+
+📊 Conclusion
+
+This lab simulates the early stages of a cyber attack and demonstrates how attackers gather intelligence before exploitation.
+
+It also highlights how SOC analysts detect and analyze suspicious scanning activity in real-world environments.
+
+---
+
+⚠️ Disclaimer
+
+All scans were performed on an authorized testing target: scanme.nmap.org
