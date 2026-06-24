@@ -1,0 +1,18 @@
+## Key Learning Outcomes
+
+- Understood how attackers perform reconnaissance using Nmap
+- Learned how to identify open ports and services
+- Practiced vulnerability scanning using NSE scripts
+- Improved ability to interpret scan results
+
+## Challenges Faced
+
+- Network restrictions in Termux environment
+- DNS and connectivity issues
+- Understanding Nmap script outputs
+
+## Next Steps
+
+- Wireshark traffic analysis lab
+- Log analysis and SIEM simulation
+- Threat detection automation using Python
