@@ -78,3 +78,10 @@ Result:
 
 ## ⚠️ Disclaimer
 This scan was performed on an authorized target (scanme.nmap.org)
+
+
+## 📸 Screenshots
+
+![Scan](scan.jpg)
+![Vuln](vuln.jpg)
+![Enum](enum.jpg)
