@@ -1,3 +1,5 @@
+🔥 Hands-on SOC Analyst Lab | Real-World Cybersecurity Simulation
+
 🚀 SOC Analyst Lab – Nmap Network Scanning & Vulnerability Assessment
 
 📌 Overview
